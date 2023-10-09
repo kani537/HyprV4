@@ -339,10 +339,10 @@ fi
 
 ### Install the zsh ###
 read -rep $'[\e[1;33mACTION\e[0m] - Would you like to activate the oh my zsh and oh my posh? (y,n) ' ZSH
-if [[ $ZSH == "Y" || $ZSH == "y"]]; then
+if [[ $ZSH == "Y" || $ZSH == "y" ]]; then
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 	cp Extras/.zshrc ~/
-	yay -S oh-my-posh
+	install_software oh-my-posh
 fi
 
 ### Install software for Asus ROG laptops ###
