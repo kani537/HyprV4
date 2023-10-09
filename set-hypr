@@ -335,6 +335,18 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
 	cp -f ~/.config/HyprV/backgrounds/v4-background-dark.jpg /usr/share/sddm/themes/sdt/wallpaper.jpg
 fi
 
+### Install the zsh ###
+read -rep $'[\e[1;33mACTION\e[0m] - Would you like to activate the zshell? (y,n) ' ZSH
+if [[ $ZSH == "Y" || $ZSH == "y"]]; then
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
+### Install the ohmyposh ###
+read -rep $'[\e[1;33mACTION\e[0m] - Would you like to activate the oh my posh? (y,n) ' OMP
+if [[ $OMP == "Y" || $OMP == "y"]]; then
+	yay -S oh-my-posh
+fi
+
 ### Install software for Asus ROG laptops ###
 read -rep $'[\e[1;33mACTION\e[0m] - For ASUS ROG Laptops - Would you like to install Asus ROG software support? (y,n) ' ROG
 if [[ $ROG == "Y" || $ROG == "y" ]]; then
