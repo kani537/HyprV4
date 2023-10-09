@@ -43,11 +43,6 @@ tooltip label{
     border-radius: 10px;
 }
 
-#custom-launch_wofi,
-#custom-launch_firefox,
-#custom-launch_thunderbird,
-#custom-launch_thunar,
-#custom-launch_kitty,
 #custom-lock_screen,
 #custom-light_dark,
 #custom-power_btn,
@@ -67,7 +62,10 @@ tooltip label{
 #temperature,
 #workspaces,
 #idle_inhibitor,
-#backlight {
+#backlight,
+#custom-prev,
+#custom-play_pause,
+#custom-next {
     background: rgba(21, 18, 27, 0);
     opacity: 0.8;
     padding: 0px 8px;
@@ -89,21 +87,4 @@ tooltip label{
     border-radius: 10px;
     margin-left: 20px;
     margin-right: 20px;
-}
-
-#custom-launch_firefox, 
-#custom-launch_thunderbird,
-#custom-launch_thunar,
-#custom-launch_wofi,
-#custom-launch_kitty,
-#custom-weather {
-    margin-left: 0px;
-    border-right: 0px;
-    font-size: 24px;
-    margin-right: 20px;
-}
-
-#custom-launch_firefox, 
-#custom-launch_kitty {
-    font-size: 20px;
 }

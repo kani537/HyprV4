@@ -67,7 +67,10 @@ tooltip label{
 #temperature,
 #workspaces,
 #idle_inhibitor,
-#backlight {
+#backlight,
+#custom-prev,
+#custom-play_pause,
+#custom-next {
     background: rgba(21, 18, 27, 0);
     opacity: 1;
     padding: 0px 8px;
@@ -88,21 +91,4 @@ tooltip label{
     border-radius: 10px;
     margin-left: 0px;
     margin-right: 0px;
-}
-
-#custom-launch_firefox, 
-#custom-launch_thunderbird,
-#custom-launch_thunar,
-#custom-launch_wofi,
-#custom-launch_kitty,
-#custom-weather {
-    margin-left: 0px;
-    border-right: 0px;
-    font-size: 24px;
-    margin-right: 20px;
-}
-
-#custom-launch_firefox, 
-#custom-launch_kitty {
-    font-size: 20px;
 }

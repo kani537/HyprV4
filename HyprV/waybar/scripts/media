@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo $(playerctl metadata artist | sed -E 's/^(.{16}).*/\1/'): $(playerctl metadata title | sed -E 's/^(.{40}).*/\1/')
