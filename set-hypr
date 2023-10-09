@@ -332,6 +332,8 @@ if [[ $ZSH == "Y" || $ZSH == "y" ]]; then
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 	cp Extras/.zshrc ~/
 	install_software oh-my-posh
+	mkdir ~/.cache/oh-my-posh/themes/
+	cp Extras/aliens.omp.json ~/.cache/oh-my-posh/themes/
 fi
 
 ### Install software for Asus ROG laptops ###
