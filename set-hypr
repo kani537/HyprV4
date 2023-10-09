@@ -71,6 +71,8 @@ install_stage=(
 	xfce4-settings
 	nwg-look-bin
 	sddm
+	zoxide
+	fzf
 )
 
 for str in ${myArray[@]}; do
@@ -336,14 +338,10 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
 fi
 
 ### Install the zsh ###
-read -rep $'[\e[1;33mACTION\e[0m] - Would you like to activate the zshell? (y,n) ' ZSH
+read -rep $'[\e[1;33mACTION\e[0m] - Would you like to activate the oh my zsh and oh my posh? (y,n) ' ZSH
 if [[ $ZSH == "Y" || $ZSH == "y"]]; then
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-fi
-
-### Install the ohmyposh ###
-read -rep $'[\e[1;33mACTION\e[0m] - Would you like to activate the oh my posh? (y,n) ' OMP
-if [[ $OMP == "Y" || $OMP == "y"]]; then
+	cp Extras/.zshrc ~/
 	yay -S oh-my-posh
 fi
 
