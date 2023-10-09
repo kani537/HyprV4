@@ -1,16 +1,16 @@
 {
-    "clock": {
-        "format": "{:%H:%M}",
-        "tooltip-format": "{: %A, %e %B %Y}"
-    },
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "{: %A, %e %B %Y}"
+  },
 
-    "temperature": {
-        "thermal-zone": 1,
-        "format": " {temperatureC}°C",
-        "format-alt-click": "click-right",
-        "format-alt": "",
-        "critical-threshold": 70,
-        "format-critical": " {temperatureC}°C",
-        "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
-    }
+  "temperature": {
+    "thermal-zone": 1,
+    "format": " {temperatureC}°C",
+    "format-alt-click": "click-right",
+    "format-alt": "",
+    "critical-threshold": 70,
+    "format-critical": " {temperatureC}°C",
+    "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
+  }
 }

@@ -269,18 +269,6 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
 	# copy the HyprV directory
 	cp -R HyprV ~/.config/
 
-	#set the measuring unit
-	echo -e "$CNT - Attempring to set mesuring unit..."
-	if locale -a | grep -q ^en_US; then
-		echo -e "$COK - Setting mesuring system to imperial..."
-		ln -sf ~/.config/HyprV/waybar/conf/mesu-imp.jsonc ~/.config/HyprV/waybar/conf/mesu.jsonc
-		sed -i 's/SET_MESU=""/SET_MESU="I"/' ~/.config/HyprV/hyprv.conf
-	else
-		echo -e "$COK - Setting mesuring system to metric..."
-		sed -i 's/SET_MESU=""/SET_MESU="M"/' ~/.config/HyprV/hyprv.conf
-		ln -sf ~/.config/HyprV/waybar/conf/mesu-met.jsonc ~/.config/HyprV/waybar/conf/mesu.jsonc
-	fi
-
 	# Setup each appliaction
 	# check for existing config folders and backup
 	for DIR in hypr kitty mako swaylock waybar wlogout wofi; do
@@ -340,6 +328,7 @@ fi
 ### Install the zsh ###
 read -rep $'[\e[1;33mACTION\e[0m] - Would you like to activate the oh my zsh and oh my posh? (y,n) ' ZSH
 if [[ $ZSH == "Y" || $ZSH == "y" ]]; then
+	install_software zsh
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 	cp Extras/.zshrc ~/
 	install_software oh-my-posh
